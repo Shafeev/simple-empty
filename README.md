@@ -1,0 +1,2 @@
+# simple-empty
+Template algorithms
