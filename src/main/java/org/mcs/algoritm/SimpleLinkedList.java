@@ -1,6 +1,7 @@
 package org.mcs.algoritm;
 
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.LinkedList;
 
 public class SimpleLinkedList {
@@ -43,6 +44,24 @@ public class SimpleLinkedList {
 
         LinkedList<String> result = mergeKLists(arrayLinkedList);
 
+//        Collections.sort(result);
+
+        Collections.sort(result, new Comparator<String>() {
+            @Override
+            public int compare(String s1, String s2) {
+                if (s1 == s2) {
+                    return 0;
+                }
+                if (s1 == null) {
+                    return -1;
+                }
+                if (s2 == null) {
+                    return 1;
+                }
+                return s1.compareTo(s2);
+            }
+        });
+        System.out.println(result);
         Collections.sort(result);
         System.out.println(result);
     }
