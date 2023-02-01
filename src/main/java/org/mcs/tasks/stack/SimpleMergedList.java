@@ -1,4 +1,4 @@
-package org.mcs.tasks;
+package org.mcs.tasks.stack;
 
 import java.util.Arrays;
 import java.util.Random;
